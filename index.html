@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ الصفحة الرئيسية ============ -->
+<div id="home">
+  <div class="logo"><span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></div>
+  <div class="search-wrap">
+    <form id="search-form">
+      <div class="sugg-wrap">
+        <div class="search-box">
+          <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#4285F4" d="M21.5 20.5l-5.4-5.4a7.5 7.5 0 1 0-1 1l5.4 5.4a.7.7 0 0 0 1-1zM4.5 10.5a6 6 0 1 1 12 0 6 6 0 0 1-12 0z"/></svg>
+          <input id="search-input" type="text" placeholder="ابحث في Google أو اكتب رابط URL" autocomplete="off">
+        </div>
+        <div class="suggestions hidden" id="suggestions"></div>
+      </div>
+      <div class="buttons">
+        <button id="btn-search" type="submit">بحث Google</button>
+      </div>
+    </form>
+  </div>
+  <div class="home-footer"></div>
+</div>
+
+<!-- ============ صفحة النتائج ============ -->
+<div id="results" class="hidden">
+  <div id="results-header">
+    <div class="logo-small" id="logo-small-click"><span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></div>
+    <form id="search-form-2">
+      <div class="sugg-wrap sugg-wrap-small">
+        <div class="search-box-small">
+          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M21.5 20.5l-5.4-5.4a7.5 7.5 0 1 0-1 1l5.4 5.4a.7.7 0 0 0 1-1zM4.5 10.5a6 6 0 1 1 12 0 6 6 0 0 1-12 0z"/></svg>
+          <input id="search-input-2" type="text" autocomplete="off">
+        </div>
+        <div class="suggestions hidden" id="suggestions-2"></div>
+      </div>
+    </form>
+  </div>
+  <div class="tabs">
+    <span class="active" id="tab-all">الكل</span>
+    <span id="tab-videos">فيديوهات</span>
+    <span id="tab-images">الصور</span>
+  </div>
+  <div class="result-count" id="result-count"></div>
+
+  <div id="text-results"></div>
+  <div id="video-results" class="hidden"></div>
+  <div id="image-results" class="hidden"></div>
+  <div id="no-results" class="hidden"></div>
+</div>
+
+
+<!-- ============ عرض الصورة مكبّرة ============ -->
+<div id="lightbox" class="hidden">
+  <span id="lightbox-close">&times;</span>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
